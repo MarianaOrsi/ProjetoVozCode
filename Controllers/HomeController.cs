@@ -2,8 +2,6 @@ using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ProjetoVozCode.Models;
 
-// Comentário teste - Mari
-
 namespace ProjetoVozCode.Controllers;
 
 public class HomeController : Controller
@@ -15,7 +13,6 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    //Comentando//
 
     public IActionResult Index()
     {
