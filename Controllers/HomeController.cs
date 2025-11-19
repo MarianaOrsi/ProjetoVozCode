@@ -13,6 +13,8 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    //Comentando//
+
     public IActionResult Index()
     {
         return View();

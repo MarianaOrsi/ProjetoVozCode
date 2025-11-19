@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ProjetoVozCode")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2593edb79663beb8d4da8d49f022b7750150806e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ProjetoVozCode")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ProjetoVozCode")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
