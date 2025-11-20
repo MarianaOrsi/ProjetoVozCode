@@ -4708,23 +4708,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mariana.morsi\\.nuget\\packages\\": {},
+    "C:\\Users\\ryan.xnnobrega\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\ProjetoVozCode.csproj",
+      "projectUniqueName": "C:\\Users\\ryan.xnnobrega\\OneDrive - SENAC - SP\\Área de Trabalho\\back-end\\ProjetoVozCode\\ProjetoVozCode.csproj",
       "projectName": "ProjetoVozCode",
-      "projectPath": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\ProjetoVozCode.csproj",
-      "packagesPath": "C:\\Users\\mariana.morsi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\",
+      "projectPath": "C:\\Users\\ryan.xnnobrega\\OneDrive - SENAC - SP\\Área de Trabalho\\back-end\\ProjetoVozCode\\ProjetoVozCode.csproj",
+      "packagesPath": "C:\\Users\\ryan.xnnobrega\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ryan.xnnobrega\\OneDrive - SENAC - SP\\Área de Trabalho\\back-end\\ProjetoVozCode\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\mariana.morsi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ryan.xnnobrega\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
