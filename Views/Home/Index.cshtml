@@ -1,27 +1,28 @@
 ﻿@page "/login"
 
-@using Microsoft.AspNetCore.Components.Forms
+@model Usuario
 
 <div class="login-container">
     <div class="login-form">
         <img src="assets/blind-person-icon.svg" alt="Ícone de pessoa com bengala" class="logo-icon" />
 
-        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+        <form asp-action="Login" asp-controller="Login">
             <div class="input-group">
                 <span class="input-icon">👤</span>
-                <InputText @bind-Value="loginModel.Username" placeholder="Usuário ou Email" class="form-input" />
-                <span class="mic-icon">🎤</span>
+                <input name="Email"  placeholder="Usuário ou Email" class="form-input" />
             </div>
             <div class="input-group">
                 <span class="input-icon">🔒</span>
-                <InputText type="password" @bind-Value="loginModel.Password" placeholder="Senha" class="form-input" />
+                <input type="password" name="Senha" placeholder="Senha" class="form-input" />
             </div>
-            <button type="submit" class="login-button">LOGIN</button>
-        </EditForm>
 
+            <button type="submit" class="login-button">LOGIN</button>
+        </form>
+
+        <h1 style="color: red">@TempData["ErrorMessage"]</h1>
         <a href="/forgot-password" class="forgot-password">Esqueci minha senha</a>
 
-        <button class="register-button" @onclick="NavigateToRegister">CADASTRAR</button>
+        @* <button class="register-button" @onclick="NavigateToRegister">CADASTRAR</button> *@
 
         <div class="social-icons">
             <a href="https://instagram.com"><img src="assets/instagram-icon.svg" alt="Instagram" /></a>
@@ -141,25 +142,3 @@
         width: 30px;
     }
 </style>
-
-@code {
-    private LoginModel loginModel = new();
-
-    private class LoginModel
-    {
-        public string Username { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-    }
-
-    private void HandleLogin()
-    {
-        // Lógica de login aqui, ex: navegar para dashboard
-        Console.WriteLine("Login realizado");
-    }
-
-    private void NavigateToRegister()
-    {
-        // Navegar para página de cadastro
-        Console.WriteLine("Navegar para cadastro");
-    }
-}
