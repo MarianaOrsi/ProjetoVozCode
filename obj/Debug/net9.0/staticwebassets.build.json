@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "45twDOuuJgX+3VrwNU8l9bYn9EtEYGLYgwkqnsGLA9w=",
+  "Hash": "lB/3QS/+SZbwJwmEeN0yt8Cjlyfn8T7SnAFYWzb5h78=",
   "Source": "ProjetoVozCode",
   "BasePath": "_content/ProjetoVozCode",
   "Mode": "Default",
@@ -584,12 +584,12 @@
       "OriginalItemSpec": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-b9sayid5wm.gz",
+      "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-tiic6ecyd5.gz",
       "SourceId": "ProjetoVozCode",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/ProjetoVozCode",
-      "RelativePath": "css/site#[.{fingerprint=b9sayid5wm}]?.css.gz",
+      "RelativePath": "css/site#[.{fingerprint=tiic6ecyd5}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -598,8 +598,8 @@
       "RelatedAsset": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "0suozzrugb",
-      "Integrity": "0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=",
+      "Fingerprint": "zeskx3tuk5",
+      "Integrity": "28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css"
@@ -1417,8 +1417,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "b9sayid5wm",
-      "Integrity": "j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=",
+      "Fingerprint": "tiic6ecyd5",
+      "Integrity": "OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -2728,13 +2728,13 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.b9sayid5wm.css",
-      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-b9sayid5wm.gz",
+      "Route": "css/site.css",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-tiic6ecyd5.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.003134796238"
+          "Quality": "0.002816901408"
         }
       ],
       "ResponseHeaders": [
@@ -2744,19 +2744,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "354"
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -2772,26 +2772,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "W/\"OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "b9sayid5wm"
-        },
-        {
-          "Name": "label",
-          "Value": "css/site.css"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css",
+      "Route": "css/site.css",
       "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -2801,7 +2793,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "667"
+          "Value": "743"
         },
         {
           "Name": "Content-Type",
@@ -2809,11 +2801,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
+          "Value": "\"OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.css.gz",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-tiic6ecyd5.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "354"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.tiic6ecyd5.css",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-tiic6ecyd5.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.002816901408"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "354"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "tiic6ecyd5"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.tiic6ecyd5.css",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "743"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2823,7 +2960,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "tiic6ecyd5"
         },
         {
           "Name": "label",
@@ -2831,13 +2968,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
+          "Value": "sha256-OxmOO+0WN8P8+t/OdnfLCaZOrYQ85Eo/eC68zZ8Y45E="
         }
       ]
     },
     {
-      "Route": "css/site.b9sayid5wm.css.gz",
-      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-b9sayid5wm.gz",
+      "Route": "css/site.tiic6ecyd5.css.gz",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-tiic6ecyd5.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -2846,7 +2983,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "318"
+          "Value": "354"
         },
         {
           "Name": "Content-Type",
@@ -2854,11 +2991,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
+          "Value": "\"28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
+          "Value": "Tue, 25 Nov 2025 22:50:33 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -2876,7 +3013,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "b9sayid5wm"
+          "Value": "tiic6ecyd5"
         },
         {
           "Name": "label",
@@ -2884,144 +3021,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-b9sayid5wm.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.003134796238"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css",
-      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "667"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg="
-        }
-      ]
-    },
-    {
-      "Route": "css/site.css.gz",
-      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\obj\\Debug\\net9.0\\compressed\\d6euwnqbrp-b9sayid5wm.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "318"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Tue, 18 Nov 2025 22:43:25 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-0FC1RbVkLkwKhJ1oi+r2Hw4Tm9av6DyJeo95YVvfA3Y="
+          "Value": "sha256-28mkI20BuFV4ROqwEkQRTT4VnzWRF4VBqhtMSgdKWQ8="
         }
       ]
     },

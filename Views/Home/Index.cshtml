@@ -1,5 +1,6 @@
-﻿@page "/login"
-
+﻿@{
+  Layout = "~/Views/Shared/_LayoutLogin.cshtml";
+}
 
 @model Usuario
 
@@ -22,27 +23,10 @@
 
         <h1 style="color: red">@TempData["ErrorMessage"]</h1>
         <a href="/forgot-password" class="forgot-password">Esqueci minha senha</a>
-
-        @* <button class="register-button" @onclick="NavigateToRegister">CADASTRAR</button> *@
-
-        <div class="social-icons">
-            <a href="https://instagram.com"><img src="assets/instagram-icon.svg" alt="Instagram" /></a>
-
-            <a href="https://facebook.com"><img src="assets/facebook-icon.svg" alt="Facebook" /></a>
-
-            <a href="https://x.com"><img src="assets/twitter-icon.svg" alt="Twitter" /></a>
-        </div>
     </div>
 </div>
 
 <style>
-
-    * {
-        margin: 0;
-        padding: 0;
-        font-family: "Inter", sans-serif;
-    }
-
     body {
         background-color: #0d1321;
     }
@@ -89,6 +73,17 @@
     .input-group {
         position: relative;
         margin-bottom: 20px;
+    }
+
+    .input-group input::placeholder{
+        color: #f0ebd8ff;
+        
+    }
+
+    .textarea:focus, input:focus{
+        box-shadow: 0 0 0 0;
+        outline: 0;
+        color: #f0ebd8ff;
     }
 
     .form-input {
