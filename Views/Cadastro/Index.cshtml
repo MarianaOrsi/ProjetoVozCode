@@ -51,12 +51,12 @@
             background: linear-gradient(to right,
                     #ff512f,
                     #f09819);
-            right: -30px;
+            right: -80px;
             bottom: -80px;
         }
 
         form {
-            height: 550px;
+            height: 650px;
             width: 400px;
             background-color: rgba(255, 255, 255, 0.13);
             position: absolute;
@@ -67,7 +67,7 @@
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-            padding: 50px 35px;
+            padding: 30px 35px;
         }
 
         form * {
@@ -128,8 +128,11 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form asp-action="Login" asp-controller="Login">
-        <h3>Login</h3>
+    <form asp-action="Cadastro" asp-controller="Cadastro">
+        <h3>Cadastro</h3>
+
+        <label for="text">Nome</label>
+        <input required type="text" name="nome" placeholder="" id="nome">
 
         <label for="username">E-mail</label>
         <input required type="email" name="email" placeholder="" id="username">
@@ -137,8 +140,11 @@
         <label for="password">Senha</label>
         <input required type="password" name="senha" placeholder="" id="password">
 
-        <button type="submit">Entrar</button>
-        <a href="/cadastro"><button type="button">Cadastrar</button></a>
+        <label for="password">Confirme sua senha</label>
+        <input required type="password" name="senha" placeholder="" id="password">
+
+
+        <button type="submit">Cadastrar</button>
 
         <h1 style="color: red">@TempData["ErrorMessage"]</h1>
     </form>

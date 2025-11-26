@@ -10,6 +10,12 @@ namespace ProjetoVozCode.Controllers
     {
         vozCodeContext _context = new vozCodeContext();
         
+        /// <summary>
+        /// Função apenas para realizar o atoooooo de logar
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="senha"></param>
+        /// <returns></returns> <summary>
         public IActionResult Login(string email = "", string senha = "")
         {
             if (!string.IsNullOrEmpty(email))
@@ -27,7 +33,7 @@ namespace ProjetoVozCode.Controllers
             }
 
             TempData["ErrorMessage"] = "Login inválido";
-            
+
             return RedirectToAction("Index", "Home");
         }
     }
