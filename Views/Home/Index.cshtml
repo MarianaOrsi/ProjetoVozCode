@@ -6,10 +6,10 @@
     <div class="login-form">
         <img src="assets/blind-person-icon.svg" alt="Ícone de pessoa com bengala" class="logo-icon" />
 
-        <EditForm Model="@loginModel" OnValidSubmit="HandleLogin">
+        <EditForm Model="@login" OnValidSubmit="HandleLogin">
             <div class="input-group">
                 <span class="input-icon">👤</span>
-                <InputText @bind-Value="loginModel.Username" placeholder="Usuário ou Email" class="form-input" />
+                <InputText @bind-Value="login.Username" placeholder="Usuário ou Email" class="form-input" />
                 <span class="mic-icon">🎤</span>
             </div>
             <div class="input-group">
@@ -142,24 +142,136 @@
     }
 </style>
 
-@code {
-    private LoginModel loginModel = new();
 
-    private class LoginModel
-    {
-        public string Username { get; set; } = string.Empty;
-        public string Password { get; set; } = string.Empty;
-    }
+<!-- Pagina de Cadastro -->
 
-    private void HandleLogin()
-    {
-        // Lógica de login aqui, ex: navegar para dashboard
-        Console.WriteLine("Login realizado");
-    }
+@page "/Cadastro" {
+    
 
-    private void NavigateToRegister()
-    {
-        // Navegar para página de cadastro
-        Console.WriteLine("Navegar para cadastro");
-    }
+@model ProjetoVozCode.Models.Usuario
+@{
+    ViewData["Title"] = "Tela de Cadastro";
 }
+
+<!-- Importa CSS e Font Awesome -->
+@page "/cadastro"
+@model ProjetoVozCode.Pages.Cadastro
+
+@{
+    ViewData["Title"] = "Tela de Cadastro";
+}
+
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<style>
+    .cadastro-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: linear-gradient(to bottom right, #000050, #0000a0);
+    }
+
+    .cadastro-form {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 300px;
+    }
+
+    .logo-icon {
+        width: 80px;
+        margin-bottom: 20px;
+    }
+
+    .form-group {
+        position: relative;
+        margin-bottom: 20px;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px 40px 10px 10px;
+        border: none;
+        border-radius: 20px;
+        background: rgba(200, 200, 255, 0.5);
+        color: black;
+    }
+
+    .icon {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 18px;
+    }
+
+    .btn-cadastrar {
+        background: #ffffff;
+        color: black;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    .text-danger {
+        display: block;
+        color: red;
+        font-size: 12px;
+    }
+
+    .sucesso {
+        color: green;
+        margin-top: 10px;
+    }
+</style>
+
+<div class="cadastro-container">
+    <div class="cadastro-form">
+        <h2>@ViewData["Title"]</h2>
+        <img src="~/images/icone-acessibilidade.png" alt="Ícone de pessoa com bengala" class="logo-icon" />
+
+        <form method="post">
+            <div class="form-group">
+                <input asp-for="Input.Nome" placeholder="Nome" />
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+                <span asp-validation-for="Input.Nome" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.Email" placeholder="E-mail" />
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.Senha" type="password" placeholder="Senha" />
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+                <span asp-validation-for="Input.Senha" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Input.ConfirmarSenha" type="password" placeholder="Confirme sua senha" />
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+                <span asp-validation-for="Input.ConfirmarSenha" class="text-danger"></span>
+            </div>
+
+            <button type="submit" class="btn-cadastrar">Cadastrar</button>
+        </form>
+
+        @if (TempData["Mensagem"] != null)
+        {
+            <p class="sucesso">@TempData["Mensagem"]</p>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
+
