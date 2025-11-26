@@ -80,8 +80,15 @@
 
         form h3 {
             font-size: 32px;
-            font-weight: 500;
+            font-weight: 700;
             line-height: 42px;
+            text-align: center;
+        }
+
+        form h1 {
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 40px;
             text-align: center;
         }
 
@@ -109,7 +116,7 @@
         }
 
         button {
-            margin-top: 40px;
+            margin-top: 23px;
             width: 100%;
             background-color: #f0ebd8ff;
             color: #080710;
@@ -131,7 +138,7 @@
     <form asp-action="Cadastro" asp-controller="Cadastro">
         <h3>Cadastro</h3>
 
-        <label for="text">Nome</label>
+        <label for="text">Nome completo</label>
         <input required type="text" name="nome" placeholder="" id="nome">
 
         <label for="username">E-mail</label>
@@ -141,12 +148,12 @@
         <input required type="password" name="senha" placeholder="" id="password">
 
         <label for="password">Confirme sua senha</label>
-        <input required type="password" name="senha" placeholder="" id="password">
+        <input required type="password" name="confirmarSenha" placeholder="" id="password">
 
 
         <button type="submit">Cadastrar</button>
 
-        <h1 style="color: red">@TempData["ErrorMessage"]</h1>
+        <h1 style="color: #f0ebd8ff">@TempData["ErrorMessage"]</h1>
     </form>
 
 

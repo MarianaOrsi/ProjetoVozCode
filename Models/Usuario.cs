@@ -5,6 +5,8 @@ namespace ProjetoVozCode.Models;
 
 public partial class Usuario
 {
+    internal string? confirmarSenha;
+
     public int Id { get; set; }
 
     public string Nome { get; set; } = null!;

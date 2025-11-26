@@ -21,29 +21,35 @@ namespace ProjetoVozCode.Controllers
         /// Função apenas para realizar o ato de criar o cadastro
 
         [Route("Cadastrar")]
-        public IActionResult Cadastro(Usuario usuario)
+        public IActionResult Cadastro(Usuario usuario, string confirmarsenha)
         {
-
-            if (!string.IsNullOrWhiteSpace(usuario.Email))
+            if (usuario.Senha.ToLower() == confirmarsenha.ToLower())
             {
-                var usuarioExistente = _context.Usuarios.FirstOrDefault(x => x.Email.ToLower() == usuario.Email.ToLower());
-
-                if (usuarioExistente != null)
+                if (!string.IsNullOrWhiteSpace(usuario.Email))
                 {
-                    TempData["ErrorMessage"] = "Email já cadastrado.";
-                    return RedirectToAction("Privacy", "Home");
+                    var usuarioExistente = _context.Usuarios.FirstOrDefault(x => x.Email.ToLower() == usuario.Email.ToLower());
+
+                    if (usuarioExistente != null)
+                    {
+                        TempData["ErrorMessage"] = "Email já cadastrado.";
+                        return RedirectToAction("Privacy", "Home");
+                    }
+
+                    _context.Add(usuario);
+
+                    _context.SaveChanges();
                 }
-
-                _context.Add(usuario);
-
-                _context.SaveChanges();
-            }
-            else
-            {
-                TempData["ErrorMessage"] = "Login inválido";
+                else
+                {
+                    TempData["ErrorMessage"] = "Login inválido";
+                }
+                return RedirectToAction("Index", "Home");
             }
 
-            return RedirectToAction("Privacy", "Home");
+            TempData["ErrorMessage"] = "As senhas não conferem";
+
+            return RedirectToAction("Index");
         }
+
     }
 }
