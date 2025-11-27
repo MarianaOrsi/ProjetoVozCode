@@ -67,7 +67,7 @@
             backdrop-filter: blur(10px);
             border: 2px solid rgba(255, 255, 255, 0.1);
             box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-            padding: 50px 35px;
+            padding: 25px 35px;
         }
 
         form * {
@@ -82,6 +82,13 @@
             font-size: 32px;
             font-weight: 700;
             line-height: 42px;
+            text-align: center;
+        }
+
+        form h1 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 40px;
             text-align: center;
         }
 
@@ -129,13 +136,13 @@
         <div class="shape"></div>
     </div>
     <form asp-action="Login" asp-controller="Login">
-        <h3>Login</h3>
+        <h3>LOGIN</h3>
 
         <label for="username">E-mail</label>
-        <input required type="email" name="email" placeholder="" id="username">
+        <input required type="email" name="email" id="username">
 
         <label for="password">Senha</label>
-        <input required type="password" name="senha" placeholder="" id="password">
+        <input required type="password" name="senha" id="password">
 
         <button type="submit">Entrar</button>
         <a href="/cadastro"><button type="button">Cadastrar</button></a>

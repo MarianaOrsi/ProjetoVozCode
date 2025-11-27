@@ -9,13 +9,8 @@ namespace ProjetoVozCode.Controllers
     public class LoginController : Controller
     {
         vozCodeContext _context = new vozCodeContext();
-        
-        /// <summary>
-        /// Função apenas para realizar o atoooooo de logar
-        /// </summary>
-        /// <param name="email"></param>
-        /// <param name="senha"></param>
-        /// <returns></returns> <summary>
+
+        /// Função apenas para realizar o ato de logar
         public IActionResult Login(string email = "", string senha = "")
         {
             if (!string.IsNullOrEmpty(email))
