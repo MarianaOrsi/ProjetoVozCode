@@ -147,3 +147,170 @@
 </body>
 
 </html>
+
+@page "/escolha-linguagens"
+@model ProjetoVozCode.Pages.EscolhaLinguagensModel
+
+@{
+    ViewData["Title"] = "Escolha de Linguagens";
+}
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        background: linear-gradient(135deg, #0a1f3d, #001233);
+        font-family: 'Segoe UI', sans-serif;
+        color: white;
+    }
+
+    .container-principal {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        padding-left: 100px; /* posiciona mais à esquerda como na imagem */
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Decoração futurista (cantos) */
+    .container-principal::before,
+    .container-principal::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 150px;
+        border: 3px solid #6c63ff;
+        opacity: 0.4;
+    }
+
+    .container-principal::before {
+        top: 20px;
+        left: 20px;
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .container-principal::after {
+        top: 20px;
+        right: 20px;
+        border-left: none;
+        border-bottom: none;
+    }
+
+    .linguagens-container {
+        background: rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(10px);
+        padding: 40px 50px;
+        border-radius: 20px;
+        width: 420px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+        text-align: left;
+    }
+
+    h2 i {
+        margin-left: 10px;
+        color: #6c63ff;
+    }
+
+    .opcao {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+        font-size: 19px;
+    }
+
+    .opcao input[type="checkbox"] {
+        width: 22px;
+        height: 22px;
+        margin-right: 15px;
+        accent-color: #00ff99; /* verde neon quando marcado */
+        cursor: pointer;
+    }
+
+    .opcao label {
+        flex: 1;
+        cursor: pointer;
+    }
+
+    .icon {
+        font-size: 20px;
+        opacity: 0.8;
+    }
+
+    .btn-confirmar {
+        margin-top: 40px;
+        width: 100%;
+        padding: 14px;
+        background: linear-gradient(90deg, #b8a9c9, #6c63ff);
+        border: none;
+        border-radius: 25px;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn-confirmar:hover {
+        transform: scale(1.03);
+        box-shadow: 0 0 20px rgba(108, 99, 255, 0.6);
+    }
+
+    .sucesso {
+        margin-top: 20px;
+        color: #00ff99;
+        text-align: center;
+        font-weight: bold;
+    }
+</style>
+
+<div class="container-principal">
+    <div class="linguagens-container">
+        <h2>Quais linguagens você deseja aprender? <i class="fas fa-headphones"></i></h2>
+
+        <form method="post">
+            <div class="opcao">
+                <input type="checkbox" asp-for="Linguagens.CSharp" id="csharp" />
+                <label for="csharp">C#</label>
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" asp-for="Linguagens.PHP" id="php" />
+                <label for="php">PHP</label>
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" asp-for="Linguagens.Java" id="java" />
+                <label for="java">JAVA</label>
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+            </div>
+
+            <div class="opcao">
+                <input type="checkbox" asp-for="Linguagens.Python" id="python" />
+                <label for="python">PYTHON</label>
+                <span class="icon"><i class="fas fa-microphone"></i></span>
+            </div>
+
+            <button type="submit" class="btn-confirmar">Confirmar</button>
+        </form>
+
+        @if (TempData["Mensagem"] != null)
+        {
+            <p class="sucesso">@TempData["Mensagem"]</p>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
