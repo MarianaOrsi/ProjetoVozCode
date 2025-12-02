@@ -1,45 +1,31 @@
 using GenerativeAI;
-using GenerativeAI.Core;
-using GenerativeAI.Types;
 using VozCode.Repositories.Interfaces;
 
 namespace VozCode.Repositories
 {
     public class GeminiCodeAnalysisRepository : IGeminiCodeAnalysisRepository
     {
-        public GenerativeModel modelo { get; private set; }
+        private readonly GenerativeModel _modelo;
 
-        // O Construtor recebe IConfiguration para obter a chave de API
         public GeminiCodeAnalysisRepository(IConfiguration configuration)
         {
-            // ⚠️ Mantenha o caminho da sua chave consistente com o appsettings.json
             string apiKeyGemini = configuration["GeminiSettings:ApiKey"];
 
-            // Configuração do Modelo
-            modelo = new GenerativeModel(apiKeyGemini, new ModelParams()
-            {
-                GenerationConfig = new GenerationConfig()
-                {
-                    Temperature = 0.2f, // Pouca variação para feedback técnico
-                    CandidateCount = 1
-                },
-                Model = "gemini-2.5-flash" // Modelo rápido e capaz para análise de código
-            });
+            if (string.IsNullOrWhiteSpace(apiKeyGemini))
+                throw new ArgumentException("A chave de API do Gemini não foi encontrada.");
+
+            _modelo = new GenerativeModel("gemini-1.5-flash", apiKeyGemini);
         }
 
         public async Task<string> AnalisarCodigoParaFeedback(string linguagem, string codigo)
         {
-            // Gera o prompt específico
-            string promptFeedback = GerarPromptAnaliseCodigo(linguagem, codigo);
+            string prompt = GerarPromptAnaliseCodigo(linguagem, codigo);
 
-            // Chama a API do Gemini
-            var respostaModelo = await modelo.GenerateContentAsync(promptFeedback);
+            var resposta = await _modelo.GenerateContentAsync(prompt);
 
-            // Retorna o feedback do modelo
-            return respostaModelo.Text;
+            return resposta.Text;
         }
 
-        // --- Prompt Específico para Análise e Feedback ---
         private string GerarPromptAnaliseCodigo(string linguagem, string codigo)
         {
             return $@"
