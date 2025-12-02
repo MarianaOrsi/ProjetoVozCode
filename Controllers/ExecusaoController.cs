@@ -7,14 +7,6 @@ namespace ProjetoVozCode.Controllers
     [Route("[controller]")]
     public class ExecusaoController : Controller
     {
-        private readonly IGeminiCodeAnalysisRepository _geminiService;
-
-        // Construtor para Injeção de Dependência
-        public ExecusaoController(IGeminiCodeAnalysisRepository geminiService)
-        {
-            _geminiService = geminiService;
-        }
-
         vozCodeContext _context = new vozCodeContext();
         public IActionResult Index()
         {
