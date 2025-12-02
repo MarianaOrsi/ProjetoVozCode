@@ -1,154 +1,191 @@
-
 @{
     ViewData["Title"] = "Editor";
     Layout = null;
 }
+<div class="container">
+    <!-- Sidebar esquerda -->
+    <div class="sidebar-left">
+        <i class="fas fa-arrow-left back-arrow"></i>
+        <div class="sidebar-title">Lateral (arquivos)</div>
+        <i class="fas fa-owl owl-icon"></i>
+    </div>
 
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"]</title>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css" />
-    
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body, html { height: 100%; background: #0d1b2a; font-family: 'Consolas', monospace; color: #e0e1dd; overflow: hidden; }
-
-        /* Layout exato */
-        .container {
-            display: flex;
-            height: 100vh;
-            padding: 30px 40px; /* espaço nas bordas */
-            gap: 0; /* colados um no outro */
-        }
-
-        /* Sidebar esquerda - arredondada só do lado esquerdo (exatamente) */
-        .sidebar-left {
-            width: 320px;
-            background: #1b263b;
-            border-radius: 60px 0 0 60px; /* muito arredondado à esquerda */
-            padding: 40px 30px;
-            display: flex;
-            flex-direction: column;
-            box-shadow: 8px 0 30px rgba(0,0,0,0.5);
-        }
-
-        /* Área principal direita (editor + barra inferior pequena) */
-        .main-right {
-            flex: 1;
-            background: #0b121e;
-            border-radius: 0 30px 30px 0; /* arredondado só à direita */
-            margin-left: -1px; /* sobrepõe levemente para ficar colado perfeitamente */
-            display: flex;
-            flex-direction: column;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
-        }
-
-        /* Editor de código (ocupa todo o espaço menos a barra pequena) */
-        .code-editor {
-            flex: 1;
-            position: relative;
-            padding: 40px 40px 40px 100px;
-            overflow: hidden;
-        }
-
-        .line-numbers {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 80px;
-            height: 100%;
-            background: #0d1625;
-            color: #415a77;
-            text-align: right;
-            padding: 40px 15px;
-            font-size: 16px;
-            line-height: 1.7;
-            user-select: none;
-            border-right: 1px solid #1e2d4d;
-        }
-
-        pre {
-            margin: 0 !important;
-            white-space: pre;
-            tab-size: 4;
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-        /* Barra inferior pequena (exatamente o retângulo) */
-        .bottom-bar {
-            height: 90px;
-            background: #16213e;
-            border-radius: 0 0 30px 0; /* só canto inferior direito arredondado */
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 40px;
-            margin-top: auto; /* empurra para o fundo */
-        }
-
-        .error-speech {
-            display: flex;
-            align-items: center;
-            background: #1b263b;
-            padding: 12px 25px;
-            border-radius: 30px;
-        }
-
-        .csharp-icon {
-            font-size: 26px;
-            color: #00c8ff;
-            margin-right: 14px;
-        }
-
-        .error-text {
-            color: #ff3366;
-            font-weight: bold;
-            font-size: 18px;
-        }
-
-        .microphone {
-            font-size: 36px;
-            color: #778da9;
-        }
-
-        .back-arrow { color: #00ff9d; font-size: 32px; margin-bottom: 40px; cursor: pointer; }
-        .sidebar-title { color: #778da9; font-size: 19px; margin-bottom: 20px; }
-        .owl-icon { margin-top: auto; font-size: 48px; color: #415a77; }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <!-- Sidebar esquerda (arredondada à esquerda) -->
-        <div class="sidebar-left">
-            <i class="fas fa-arrow-left back-arrow"></i>
-            <div class="sidebar-title">Lateral (arquivos)</div>
-            <i class="fas fa-owl owl-icon"></i>
+    <!-- Área direita -->
+    <div class="main-area">
+        <div class="top-bar">
+            <span>Menu lista / Arquivos</span>
+            <i class="fas fa-cog settings-gear"></i>
         </div>
 
-        <!-- Área direita (editor + barra pequena embaixo) -->
-        <div class="main-right">
-            <div class="code-editor">
-                <div class="line-numbers">
-                    1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50
-                </div>
-                <pre><code class="language-csharp"></code></pre>
+        <div class="code-editor">
+            <div class="line-numbers">
+                1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11<br>12<br>13<br>14<br>15<br>16<br>17<br>18<br>19<br>20<br>21<br>22<br>23<br>24<br>25<br>26<br>27<br>28<br>29<br>30<br>31<br>32<br>33<br>34<br>35<br>36<br>37<br>38<br>39<br>40<br>41<br>42<br>43<br>44<br>45<br>46<br>47<br>48<br>49<br>50
             </div>
+            <pre><code class="language-csharp"></code></pre>
+        </div>
 
-            <!-- Barra pequena no fundo (tamanho e posição exatos) -->
-            <div class="bottom-bar">
-                <div class="error-speech">
-                    <i class="fas fa-code csharp-icon"></i>
-                    <span class="error-text">vozCode...</span>
-                </div>
-                <i class="fas fa-microphone microphone"></i>
+        <!-- Barra inferior pequena e centralizada -->
+        <div class="bottom-bar">
+            <div class="error-speech">
+                <i class="fas fa-code csharp-icon"></i>
+                <span class="error-text">vozCode...</span>
             </div>
+            <i class="fas fa-microphone microphone"></i>
         </div>
     </div>
-</body>
-</html>
+</div>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body,
+    html {
+        height: 100%;
+        background: #0d1b2a;
+        font-family: 'Consolas', monospace;
+        color: #e0e1dd;
+        overflow: hidden;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    /* Sidebar esquerda - agora 32% da tela e com borda arredondada só à esquerda */
+    .sidebar-left {
+        width: 32%;
+        background: #1b263b;
+        padding: 40px 30px;
+        display: flex;
+        flex-direction: column;
+        border-top-left-radius: 80px;
+        border-bottom-left-radius: 80px;
+    }
+
+    .back-arrow {
+        color: #00ff9d;
+        font-size: 28px;
+        margin-bottom: 30px;
+        cursor: pointer;
+    }
+
+    .sidebar-title {
+        color: #778da9;
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .owl-icon {
+        margin-top: auto;
+        font-size: 40px;
+        color: #415a77;
+    }
+
+    /* Área principal direita */
+    .main-area {
+        width: 68%;
+        background: #0b121e;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .top-bar {
+        background: #16213e;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 30px;
+        height: 60px;
+        font-size: 20px;
+        border-bottom: 1px solid #33415c;
+    }
+
+    .settings-gear {
+        font-size: 26px;
+        color: #778da9;
+        cursor: pointer;
+    }
+
+    .code-editor {
+        flex: 1;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .line-numbers {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 100%;
+        background: #0d1625;
+        color: #415a77;
+        text-align: right;
+        padding: 30px 10px 0;
+        font-size: 16px;
+        line-height: 1.6;
+        user-select: none;
+        border-right: 1px solid #1e2d4d;
+        pointer-events: none;
+    }
+
+    pre {
+        height: 100%;
+        margin: 0 !important;
+        padding: 30px 20px 30px 80px !important;
+        background: transparent !important;
+        font-size: 17px;
+        line-height: 1.6;
+        white-space: pre;
+        tab-size: 4;
+        overflow: hidden;
+    }
+
+    /* Barra inferior pequena e centralizada no fundo (exatamente como na imagem) */
+    .bottom-bar {
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #1b263b;
+        padding: 14px 40px;
+        border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: auto;
+        min-width: 380px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    }
+
+    .error-speech {
+        display: flex;
+        align-items: center;
+        background: transparent;
+        padding: 0;
+    }
+
+    .csharp-icon {
+        font-size: 24px;
+        color: #00c8ff;
+        margin-right: 12px;
+    }
+
+    .error-text {
+        color: #ff3366;
+        font-weight: bold;
+        font-size: 17px;
+    }
+
+    .microphone {
+        font-size: 32px;
+        color: #778da9;
+    }
+</style>
