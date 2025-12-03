@@ -22,7 +22,7 @@ namespace ProjetoVozCode.Controllers
                 {
                     if (usuario.Senha == senha)
                     {
-                        return RedirectToAction("Privacy", "Home");
+                        return RedirectToAction("Execusao", "Home");
                     }
                 }
             }
