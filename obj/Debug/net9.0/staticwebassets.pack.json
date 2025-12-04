@@ -5,6 +5,18 @@
       "PackagePath": "staticwebassets\\ProjetoVozCode.kea8cs8xpu.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\icone-deficiente-visual.png",
+      "PackagePath": "staticwebassets\\Imagens\\icone-deficiente-visual.png"
+    },
+    {
+      "Id": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo.png",
+      "PackagePath": "staticwebassets\\Imagens\\vozCode_logo.png"
+    },
+    {
+      "Id": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo2.png",
+      "PackagePath": "staticwebassets\\Imagens\\vozCode_logo2.png"
+    },
+    {
       "Id": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

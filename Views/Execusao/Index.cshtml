@@ -3,253 +3,267 @@
     Layout = null;
 }
 
-<div class="editor-container">
+<div class="ide-container">
 
-    <!-- SIDEBAR ESQUERDA -->
+    <!-- ==== SIDEBAR ESQUERDA ==== -->
     <div class="sidebar">
-        <i class="fas fa-arrow-left back-arrow"></i>
-
-        <h3 class="sidebar-title">Feedback</h3>
-
-        <div class="sidebar-messages">
-            <!-- Aqui você coloca mensagens, erros etc -->
-            <p>O resultado da IA aparece aqui...</p>
+        <div>
+            <div class="error-speech">
+                <button class="bottom-bar">Conferir código</button>
+            </div>
         </div>
-
-        <i class="fas fa-owl owl-icon"></i>
+        <div class="sidebar-content">
+            @* feedback do código *@
+        </div>
     </div>
 
+    <!-- ==== ÁREA PRINCIPAL ==== -->
+    <div class="editor-container">
 
-    <!-- ÁREA PRINCIPAL (EDITOR) -->
-    <div class="main">
-
+        <!-- TOPO -->
         <div class="top-bar">
-            <span>
-                <img class="vozCode_Logo2" src="Imagens/vozCode_logo2.png" alt="Logo">
-            </span>
-            <i class="fas fa-cog settings-gear"></i>
+            <div class="top-bar">
+                <span>
+                    <img class="vozCode_Logo2" src="Imagens/vozCode_logo2.png" alt="Logo">
+                </span>
+            </div>
         </div>
 
-        <form asp-action="Execusao" asp-controller="Execusao" class="code-area">
+        <!-- EDITOR -->
+        <div class="editor-wrapper">
 
-            <!-- NUMERAÇÃO + TEXTO -->
-            <div class="editor-wrapper" style="height: 90vh;">
+            <div class="line-numbers" id="lineNumbers"></div>
 
-                <div class="line-numbers" id="lineNumbers"></div>
+            <div class="editor-area">
+                <div id="highlightLine"></div>
 
-                <textarea id="codeInput"
-                          name="codigo"
-                          class="editor-input"
-                          placeholder="Digite seu código aqui..."></textarea>
-
+                <textarea id="codeInput" class="editor-input" placeholder="Digite seu código aqui..."></textarea>
             </div>
 
-            <!-- BARRA INFERIOR -->
-            <div>
-                <div class="error-speech">
-                    <button class="bottom-bar">Conferir código</button>
-                </div>
-                <i class="fas fa-microphone microphone"></i>
-            </div>
-
-        </form>
+        </div>
 
     </div>
 
 </div>
 
-
-
 <style>
-    /* ======== RESET ========= */
+    /* ===== RESET ===== */
     * {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        font-family: 'Segoe UI', sans-serif;
+        font-family: 'Poppins', sans-serif;
     }
 
-    html, body {
+    html,
+    body {
         height: 100%;
         background: #0d1b2a;
-        overflow: hidden; /* OK: apenas o textarea rola */
-        color: #e0e1dd;
     }
 
-    /* ======== CONTAINER GERAL ========= */
-    .editor-container {
+    /* ===== CONTAINER GERAL ===== */
+    .ide-container {
         display: flex;
-        height: 100vh;
         width: 100vw;
+        height: 100vh;
     }
 
-    /* ======== SIDEBAR ========= */
+    /* ===== SIDEBAR ===== */
     .sidebar {
-        width: 30%;
+        width: 260px;
         background: #1b263b;
-        padding: 30px 25px;
+        border-right: 1px solid #324766;
+        padding: 20px;
+        color: #e0e1dd;
         display: flex;
         flex-direction: column;
-        border-top-left-radius: 40px;
-        border-bottom-left-radius: 40px;
-    }
-
-    .back-arrow {
-        font-size: 26px;
-        color: #00ff9d;
-        cursor: pointer;
     }
 
     .sidebar-title {
-        margin-top: 20px;
-        margin-bottom: 10px;
-        color: #88a1c4;
+        font-size: 18px;
+        font-weight: 600;
+        margin-bottom: 15px;
     }
 
-    .sidebar-messages {
+    .sidebar-content {
         flex: 1;
-        margin-top: 15px;
         overflow-y: auto;
-        padding-right: 10px;
-        font-size: 15px;
+        font-size: 14px;
+        color: #c8d0e0;
     }
 
-    .owl-icon {
-        font-size: 42px;
-        color: #415a77;
-        margin-top: auto;
-        align-self: center;
-    }
-
-    /* ======== ÁREA PRINCIPAL ========= */
-    .main {
+    /* ===== ÁREA DO EDITOR ===== */
+    .editor-container {
         flex: 1;
-        background: #0b121e;
         display: flex;
         flex-direction: column;
-        position: relative;
+        height: 100%;
+        /* fixa a altura */
+        overflow: hidden;
+        /* impede que o conteúdo empurre a tela */
     }
 
+
+    /* Barra superior */
     .top-bar {
-        height: 55px;
+        height: 50px;
         background: #16213e;
         border-bottom: 1px solid #33415c;
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        padding: 0 25px;
-        font-size: 18px;
+        padding: 0 20px;
+        color: #fff;
     }
 
-    .settings-gear {
-        font-size: 24px;
-        color: #778da9;
-    }
-
-    /* ======== EDITOR ========= */
-    .code-area {
-        flex: 1;
-        position: relative;
-    }
-
+    /* Wrapper do editor */
     .editor-wrapper {
+        flex: 1;
         display: flex;
-        height: calc(100% - 110px); /* remove topbar + bottom bar */
+        height: calc(100% - 50px);
+        /* editor ocupa tudo abaixo da top-bar */
+        overflow: hidden;
+        /* IMPEDIR QUE O EDITOR DESÇA */
+        background: #0b121e;
     }
 
+    /* Números de linha */
     .line-numbers {
-        width: 60px;
-        padding: 20px 10px;
+        width: 55px;
+        padding: 15px 10px;
         background: #0d1625;
         border-right: 1px solid #1e2d4d;
         text-align: right;
-        font-size: 15px;
-        line-height: 1.6;
+        font-family: Consolas, monospace;
+        font-size: 16px;
         color: #415a77;
         user-select: none;
-        overflow-y: hidden;
+        overflow: hidden;
+        line-height: 1.6em;
     }
 
-    .editor-input {
+    /* Área que contém textarea + highlight */
+    .editor-area {
+        position: relative;
         flex: 1;
-        padding: 20px;
+    }
+
+    /* Textarea do editor */
+    .editor-input {
+        width: 100%;
+        height: 100%;
+        /* fixa o campo do editor */
+        padding: 15px;
         background: #0b121e;
         color: #e0e1dd;
-        font-size: 17px;
+        font-size: 16px;
+        font-family: Consolas, monospace;
+        line-height: 1.6em;
         border: none;
         outline: none;
         resize: none;
-        line-height: 1.6;
         overflow-y: auto;
+        /* SCROLL INTERNO – nunca cresce */
+        white-space: pre;
+        position: relative;
+        z-index: 2;
     }
 
-    /* ======== BARRA INFERIOR ========= */
-    .bottom-bar {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        transform: translateX(-50%);
-        padding: 12px 30px;
-        background: #1b263b;
-        color: #ffff;
-        font-size: 15px;
-        font-weight: 500;
-        border-radius: 30px;
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-        min-width: 170px;
-    }
-
-    .csharp-icon {
-        color: #00c8ff;
-        font-size: 20px;
-    }
-
-    .error-text {
-        font-size: 15px;
-        font-weight: bold;
-    }
-
-    .microphone {
-        font-size: 26px;
-        color: #778da9;
-    }
-
-    .top-bar span {
-        color: #ffff;
-        font-size: 30px;
-        font-weight: 500;
-    }
-
-    .vozCode_Logo2{
+    .vozCode_Logo2 {
         display: block;
         height: 150px;
         width: auto;
         gap: 15px;
     }
 
+    .bottom-bar {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: 12px 30px;
+        background: #1b263b;
+        color: #ffff;
+        font-size: 15px;
+        font-weight: bold;
+        border-radius: 30px;
+        gap: 15px;
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+    }
 
+    /* ===== SCROLLBAR ===== */
+    ::-webkit-scrollbar {
+        width: 10px;
+        /* largura total */
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+        /* trilha invisível */
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(121, 121, 121, 0.4);
+        /* thumb cinza translúcido */
+        border-radius: 10px;
+        border: 2px solid transparent;
+        /* espaço interno para deixar mais fina */
+        background-clip: padding-box;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba(140, 140, 140, 0.55);
+        /* efeito hover */
+    }
+
+    ::-webkit-scrollbar-corner {
+        background: transparent;
+    }
 </style>
 
-
-
 <script>
-/* ==== NUMERAÇÃO DE LINHAS AUTOMÁTICA ==== */
-
-function updateLineNumbers() {
     const textarea = document.getElementById("codeInput");
-    const lines = textarea.value.split("\n").length;
+    const lineNumbers = document.getElementById("lineNumbers");
+    const highlightLine = document.getElementById("highlightLine");
 
-    let html = "";
-    for (let i = 1; i <= lines; i++) html += i + "<br>";
+    /* Atualiza números de linha */
+    function updateLineNumbers() {
+        const totalLines = textarea.value.split("\n").length;
+        let html = "";
 
-    document.getElementById("lineNumbers").innerHTML = html;
-}
+        for (let i = 1; i <= totalLines; i++) {
+            html += i + "<br>";
+        }
 
-document.getElementById("codeInput").addEventListener("input", updateLineNumbers);
+        lineNumbers.innerHTML = html;
+    }
 
-// inicial
-updateLineNumbers();
+    /* Atualiza highlight */
+    function updateHighlight() {
+        const pos = textarea.selectionStart;
+        const text = textarea.value.substr(0, pos);
+        const lineIndex = text.split("\n").length - 1;
+
+        const lineHeight = parseFloat(getComputedStyle(textarea).lineHeight);
+
+        highlightLine.style.top = lineIndex * lineHeight - textarea.scrollTop + "px";
+    }
+
+    /* Sincroniza scroll */
+    textarea.addEventListener("scroll", () => {
+        lineNumbers.scrollTop = textarea.scrollTop;
+        updateHighlight();
+    });
+
+    textarea.addEventListener("input", () => {
+        updateLineNumbers();
+        updateHighlight();
+    });
+
+    textarea.addEventListener("click", updateHighlight);
+    textarea.addEventListener("keyup", updateHighlight);
+
+    /* Inicialização */
+    updateLineNumbers();
+    updateHighlight();
+
 </script>

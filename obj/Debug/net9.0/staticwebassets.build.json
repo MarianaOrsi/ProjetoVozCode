@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "PVw/RuyrZnO1IcsxI2+wlBZKtFC4QYBkJ3s7Q78F8yw=",
+  "Hash": "ezYDp9a32ft/lD4ocOfziCNauaSaO1Pb2u6E7qxMXJc=",
   "Source": "ProjetoVozCode",
   "BasePath": "_content/ProjetoVozCode",
   "Mode": "Default",
@@ -1443,6 +1443,69 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\icone-deficiente-visual.png",
+      "SourceId": "ProjetoVozCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\",
+      "BasePath": "_content/ProjetoVozCode",
+      "RelativePath": "Imagens/icone-deficiente-visual#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3ntzy6t7in",
+      "Integrity": "z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\icone-deficiente-visual.png"
+    },
+    {
+      "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo.png",
+      "SourceId": "ProjetoVozCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\",
+      "BasePath": "_content/ProjetoVozCode",
+      "RelativePath": "Imagens/vozCode_logo#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "55rqdrhm1x",
+      "Integrity": "6RQ+7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\vozCode_logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo2.png",
+      "SourceId": "ProjetoVozCode",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\",
+      "BasePath": "_content/ProjetoVozCode",
+      "RelativePath": "Imagens/vozCode_logo2#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "bfr6bn6952",
+      "Integrity": "VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Imagens\\vozCode_logo2.png"
     },
     {
       "Identity": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\js\\site.js",
@@ -3320,6 +3383,252 @@
         {
           "Name": "integrity",
           "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/icone-deficiente-visual.3ntzy6t7in.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\icone-deficiente-visual.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1361695"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Nov 2025 00:32:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3ntzy6t7in"
+        },
+        {
+          "Name": "label",
+          "Value": "Imagens/icone-deficiente-visual.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/icone-deficiente-visual.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\icone-deficiente-visual.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1361695"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 25 Nov 2025 00:32:21 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/vozCode_logo.55rqdrhm1x.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43288"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6RQ+7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 03 Dec 2025 23:26:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "55rqdrhm1x"
+        },
+        {
+          "Name": "label",
+          "Value": "Imagens/vozCode_logo.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6RQ+7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/vozCode_logo.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "43288"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6RQ+7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 03 Dec 2025 23:26:46 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6RQ+7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/vozCode_logo2.bfr6bn6952.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2075852"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 03 Dec 2025 23:27:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "bfr6bn6952"
+        },
+        {
+          "Name": "label",
+          "Value": "Imagens/vozCode_logo2.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew="
+        }
+      ]
+    },
+    {
+      "Route": "Imagens/vozCode_logo2.png",
+      "AssetFile": "C:\\Users\\mariana.morsi\\OneDrive - SENAC - SP\\Área de Trabalho\\ProjetoVozCode\\ProjetoVozCode\\wwwroot\\Imagens\\vozCode_logo2.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2075852"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 03 Dec 2025 23:27:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew="
         }
       ]
     },

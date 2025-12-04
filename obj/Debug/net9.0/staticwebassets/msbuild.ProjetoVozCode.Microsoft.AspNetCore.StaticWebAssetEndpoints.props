@@ -24,6 +24,42 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"5430"},{"Name":"Content-Type","Value":"image/x-icon"},{"Name":"ETag","Value":"\u0022Jtxf9L\u002B5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 18 Nov 2025 22:43:24 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/icone-deficiente-visual.3ntzy6t7in.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\icone-deficiente-visual.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"3ntzy6t7in"},{"Name":"integrity","Value":"sha256-z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg="},{"Name":"label","Value":"_content/ProjetoVozCode/Imagens/icone-deficiente-visual.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1361695"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Nov 2025 00:32:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/icone-deficiente-visual.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\icone-deficiente-visual.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"1361695"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022z0rX20d5GwYL43rrwlRnBJEC42GMemjBELTa3bh1AMg=\u0022"},{"Name":"Last-Modified","Value":"Tue, 25 Nov 2025 00:32:21 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/vozCode_logo.55rqdrhm1x.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\vozCode_logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"55rqdrhm1x"},{"Name":"integrity","Value":"sha256-6RQ\u002B7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE="},{"Name":"label","Value":"_content/ProjetoVozCode/Imagens/vozCode_logo.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"43288"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226RQ\u002B7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 03 Dec 2025 23:26:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/vozCode_logo.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\vozCode_logo.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-6RQ\u002B7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"43288"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00226RQ\u002B7yAdZo9UBk05xRw6HtZPLFvCsFAYVASd0lPRSOE=\u0022"},{"Name":"Last-Modified","Value":"Wed, 03 Dec 2025 23:26:46 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/vozCode_logo2.bfr6bn6952.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\vozCode_logo2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"bfr6bn6952"},{"Name":"integrity","Value":"sha256-VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew="},{"Name":"label","Value":"_content/ProjetoVozCode/Imagens/vozCode_logo2.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2075852"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew=\u0022"},{"Name":"Last-Modified","Value":"Wed, 03 Dec 2025 23:27:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/Imagens/vozCode_logo2.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\Imagens\vozCode_logo2.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"2075852"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022VxfL1XEjwht2LTaCDRK0LjMWiZpQ2hpoUFmmgzLu5ew=\u0022"},{"Name":"Last-Modified","Value":"Wed, 03 Dec 2025 23:27:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/ProjetoVozCode/js/site.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\js\site.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
