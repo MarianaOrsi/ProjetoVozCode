@@ -24,7 +24,9 @@
     <div class="main">
 
         <div class="top-bar">
-            <span>Editor de Código</span>
+            <span>
+                <img class="vozCode_Logo2" src="Imagens/vozCode_logo2.png" alt="Logo">
+            </span>
             <i class="fas fa-cog settings-gear"></i>
         </div>
 
@@ -43,12 +45,10 @@
             </div>
 
             <!-- BARRA INFERIOR -->
-            <div class="bottom-bar">
+            <div>
                 <div class="error-speech">
-                    <i class="fas fa-code csharp-icon"></i>
-                    <span class="error-text">vozCode...</span>
+                    <button class="bottom-bar">Conferir código</button>
                 </div>
-
                 <i class="fas fa-microphone microphone"></i>
             </div>
 
@@ -66,12 +66,12 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
     }
 
     html, body {
         height: 100%;
         background: #0d1b2a;
-        font-family: Consolas, monospace;
         overflow: hidden; /* OK: apenas o textarea rola */
         color: #e0e1dd;
     }
@@ -191,12 +191,15 @@
         transform: translateX(-50%);
         padding: 12px 30px;
         background: #1b263b;
+        color: #ffff;
+        font-size: 15px;
+        font-weight: 500;
         border-radius: 30px;
         display: flex;
         align-items: center;
         gap: 15px;
         box-shadow: 0 6px 25px rgba(0, 0, 0, 0.5);
-        min-width: 320px;
+        min-width: 170px;
     }
 
     .csharp-icon {
@@ -213,6 +216,21 @@
         font-size: 26px;
         color: #778da9;
     }
+
+    .top-bar span {
+        color: #ffff;
+        font-size: 30px;
+        font-weight: 500;
+    }
+
+    .vozCode_Logo2{
+        display: block;
+        height: 150px;
+        width: auto;
+        gap: 15px;
+    }
+
+
 </style>
 
 
