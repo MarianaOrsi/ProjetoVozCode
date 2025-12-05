@@ -9,7 +9,7 @@
     <div class="sidebar">
         <div>
             <div class="error-speech">
-                <button class="bottom-bar" form="analisarCodigo">Conferir código</button>
+                <button class="bottom-bar" form="analisarCodigo" onclick="lerEditor()">Conferir código</button>
             </div>
         </div>
         <div class="sidebar-content">
@@ -266,8 +266,44 @@
     textarea.addEventListener("click", updateHighlight);
     textarea.addEventListener("keyup", updateHighlight);
 
+
+
+    @* LENDO O CÓDIGO *@
+
     /* Inicialização */
     updateLineNumbers();
     updateHighlight();
+
+    function lerTexto(texto) {
+    const utterance = new SpeechSynthesisUtterance(texto);
+    utterance.lang = "pt-BR";      // Voz em português
+    utterance.rate = 1;            // Velocidade (1 = normal)
+    utterance.pitch = 1;           // Tom
+    speechSynthesis.speak(utterance);
+
+    function lerCodigoLinhaALinha() {
+    const linhas = document.getElementById("editor").value.split("\n");
+
+    let index = 0;
+
+    function lerProxima() {
+        if (index >= linhas.length) return;
+
+        const utter = new SpeechSynthesisUtterance(linhas[index]);
+        utter.lang = "pt-BR";
+
+        utter.onend = () => {
+            index++;
+            lerProxima();
+        };
+
+        speechSynthesis.speak(utter);
+    }
+
+    lerProxima();
+}
+
+}
+
 
 </script>
