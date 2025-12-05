@@ -9,11 +9,14 @@
     <div class="sidebar">
         <div>
             <div class="error-speech">
-                <button class="bottom-bar">Conferir código</button>
+                <button class="bottom-bar" form="analisarCodigo">Conferir código</button>
             </div>
         </div>
         <div class="sidebar-content">
             @* feedback do código *@
+
+            <p>@ViewBag.Analise</p>
+            
         </div>
     </div>
 
@@ -34,11 +37,12 @@
 
             <div class="line-numbers" id="lineNumbers"></div>
 
-            <div class="editor-area">
+            <form asp-action="AnalisarCodigo" asp-controller="Execusao" class="editor-area" id="analisarCodigo">
                 <div id="highlightLine"></div>
 
-                <textarea id="codeInput" class="editor-input" placeholder="Digite seu código aqui..."></textarea>
-            </div>
+                <textarea name="codigo" id="codeInput" class="editor-input"
+                    placeholder="Digite seu código aqui..."></textarea>
+            </form>
 
         </div>
 

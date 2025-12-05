@@ -18,9 +18,6 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "GeminiSetting": {
-      "ApiKey" : "AIzaSyA0FhmiCrG3j7FWdqTy1b0t59MKwvocpaI"
     }
   }
 }

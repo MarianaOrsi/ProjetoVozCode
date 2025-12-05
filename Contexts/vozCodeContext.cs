@@ -15,6 +15,7 @@ public partial class vozCodeContext : DbContext
         : base(options)
     {
     }
+    
 
     public virtual DbSet<Arquivo> Arquivos { get; set; }
 

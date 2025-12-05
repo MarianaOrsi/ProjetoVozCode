@@ -9,7 +9,8 @@ namespace VozCode.Repositories
 
         public GeminiCodeAnalysisRepository(IConfiguration configuration)
         {
-            string apiKeyGemini = configuration["GeminiSettings:ApiKey"];
+            // string apiKeyGemini = configuration["GeminiSetting:ApiKey"];
+            string apiKeyGemini = "AIzaSyDooHXrItrUWK13SRkRLU4TNtUXV-ZXUdc";
 
             if (string.IsNullOrWhiteSpace(apiKeyGemini))
                 throw new ArgumentException("A chave de API do Gemini não foi encontrada.");
