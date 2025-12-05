@@ -27,7 +27,9 @@ namespace ProjetoVozCode.Controllers
             if (!string.IsNullOrEmpty(codigo))
             {
                 var retorno = await _repository.AnalisarCodigoParaFeedback("csharp", codigo);
+                
                 TempData["Analise"] = retorno;
+                TempData["Codigo"] = codigo;
             }
 
             return RedirectToAction("Index");

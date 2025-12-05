@@ -7,21 +7,22 @@ namespace VozCode.Repositories
     {
         private readonly GenerativeModel _modelo;
 
-        public GeminiCodeAnalysisRepository(IConfiguration configuration)
+        public GeminiCodeAnalysisRepository()
         {
-            // string apiKeyGemini = configuration["GeminiSetting:ApiKey"];
-            string apiKeyGemini = "AIzaSyDooHXrItrUWK13SRkRLU4TNtUXV-ZXUdc";
+            string apiKeyGemini = "AIzaSyCYUB8pxHO75ko3ftHeKFrWoawzB8h332Q"
+                ?? throw new ArgumentException("API KEY não encontrada");
 
-            if (string.IsNullOrWhiteSpace(apiKeyGemini))
-                throw new ArgumentException("A chave de API do Gemini não foi encontrada.");
-
-            _modelo = new GenerativeModel("gemini-1.5-flash", apiKeyGemini);
+            _modelo = new GenerativeModel(
+                model: "gemini-2.5-flash",
+                apiKey: apiKeyGemini
+            );
         }
 
-        public async Task<string> AnalisarCodigoParaFeedback(string linguagem, string codigo)
+        public async Task<string> AnalisarCodigoParaFeedback(string linguagem = "csharp", string codigo = "")
         {
             string prompt = GerarPromptAnaliseCodigo(linguagem, codigo);
 
+            // ← ESTE é o correto para seu pacote
             var resposta = await _modelo.GenerateContentAsync(prompt);
 
             return resposta.Text;
@@ -39,14 +40,14 @@ namespace VozCode.Repositories
                 Formate sua resposta usando **Markdown** de forma clara e legível. Use títulos e listas
                 para facilitar a leitura por leitores de tela.
 
-                **Estrutura do Feedback (Obrigatório):**
-                ## 💖 Resumo e Encorajamento
-                (Mensagem amigável sobre o código)
+                A ideia do feedback é ser algo simplificado, não precisa de textos muitos generícos e grandes, apenas preciso de acordo com o feedback.
 
-                ## 💡 Sugestões e Melhorias
+                **Estrutura do Feedback (Obrigatório):**
+
+                ## Sugestões e Melhorias
                 (Liste pontos específicos de melhoria, boas práticas, ou bugs corrigidos)
 
-                ## 📖 Explicação do Código
+                ## Explicação do Código
                 (Explique o que o código faz de forma simples e direta)
                 
                 **Linguagem de Programação:** {linguagem}
