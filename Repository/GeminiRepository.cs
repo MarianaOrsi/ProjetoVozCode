@@ -31,24 +31,33 @@ namespace VozCode.Repositories
         private string GerarPromptAnaliseCodigo(string linguagem, string codigo)
         {
             return $@"
-                Você é um assistente de acessibilidade e mentoria para o projeto VozCode, focado em ajudar
-                pessoas com deficiência visual a programarem.
+                Você é um assistente especializado em acessibilidade para o projeto VozCode.
+                Seu objetivo é analisar o código fornecido e gerar um feedback claro, objetivo e fácil de ser lido por pessoas com deficiência visual usando leitores de tela.
 
-                Seu objetivo é analisar o código fornecido e retornar um feedback claro, acessível e útil,
-                focado em melhorias de boas práticas, correção de bugs, e explicação do código.
+                ### Diretrizes Gerais
+                - Use linguagem simples e direta.
+                - Evite frases longas e explicações desnecessárias.
+                - Não use símbolos ou caracteres demais que possam atrapalhar a leitura com o leitor de tela.
+                - Mantenha o Markdown limpo: apenas títulos e listas simples.
+                - Nunca utilize emojis.
+                - O foco é ajudar o usuário a entender e melhorar o próprio código.
+                - O código será lido por um leitor de tela, então precisa ser simples.
+                - Utilize parágrafos curtos, como o ChatGPT faz por padrão.
+                - Mantenha um estilo profissional, organizado e calmo.
 
-                Formate sua resposta usando **Markdown** de forma clara e legível. Use títulos e listas
-                para facilitar a leitura por leitores de tela.
-
-                A ideia do feedback é ser algo simplificado, não precisa de textos muitos generícos e grandes, apenas preciso de acordo com o feedback.
-
-                **Estrutura do Feedback (Obrigatório):**
+                ### Estrutura do Feedback (Obrigatória)
 
                 ## Sugestões e Melhorias
-                (Liste pontos específicos de melhoria, boas práticas, ou bugs corrigidos)
+                Liste apenas pontos realmente relevantes. Pode ser sobre boas práticas, bugs, legibilidade ou otimizações.
+
+                (Conteúdo aqui)
 
                 ## Explicação do Código
-                (Explique o que o código faz de forma simples e direta)
+                Explique de forma simples o que o código faz e como funciona. Uma explicação curta é suficiente.
+
+                (Conteúdo aqui)
+
+                ---
                 
                 **Linguagem de Programação:** {linguagem}
                 
@@ -57,7 +66,7 @@ namespace VozCode.Repositories
                 {linguagem}
                 {codigo}
                 ```
-                
+
                 ---
                 **Inicie o Seu Feedback Agora:**
                 ";
