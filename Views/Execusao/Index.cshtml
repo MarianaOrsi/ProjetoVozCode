@@ -16,7 +16,7 @@
             @* feedback do código *@
 
             <p>@TempData["Analise"]</p>
-            
+
         </div>
     </div>
 
@@ -40,8 +40,9 @@
             <form asp-action="AnalisarCodigo" asp-controller="Execusao" class="editor-area" id="analisarCodigo">
                 <div id="highlightLine"></div>
 
-                <textarea name="codigo" id="codeInput" class="editor-input" value="@TempData["Codigo"]"
-                    placeholder="Digite seu código aqui..."></textarea>
+                <textarea name="codigo" id="codeInput" class="editor-input"
+                    placeholder="Digite seu código aqui...">@TempData["Codigo"]</textarea>
+
             </form>
 
         </div>
@@ -96,7 +97,7 @@
         color: #c8d0e0;
         margin-top: 30px;
         line-height: 1.6;
-        box-shadow: 0 1px 0 rgba(16,24,40,0.04);
+        box-shadow: 0 1px 0 rgba(16, 24, 40, 0.04);
         word-wrap: break-word;
     }
 
@@ -273,40 +274,40 @@
 
     @* LENDO O CÓDIGO *@
 
-    /* Inicialização */
-    updateLineNumbers();
+        /* Inicialização */
+        updateLineNumbers();
     updateHighlight();
 
     function lerTexto(texto) {
-    const utterance = new SpeechSynthesisUtterance(texto);
-    utterance.lang = "pt-BR";      // Voz em português
-    utterance.rate = 1;            // Velocidade (1 = normal)
-    utterance.pitch = 1;           // Tom
-    speechSynthesis.speak(utterance);
+        const utterance = new SpeechSynthesisUtterance(texto);
+        utterance.lang = "pt-BR";      // Voz em português
+        utterance.rate = 1;            // Velocidade (1 = normal)
+        utterance.pitch = 1;           // Tom
+        speechSynthesis.speak(utterance);
 
-    function lerCodigoLinhaALinha() {
-    const linhas = document.getElementById("editor").value.split("\n");
+        function lerCodigoLinhaALinha() {
+            const linhas = document.getElementById("editor").value.split("\n");
 
-    let index = 0;
+            let index = 0;
 
-    function lerProxima() {
-        if (index >= linhas.length) return;
+            function lerProxima() {
+                if (index >= linhas.length) return;
 
-        const utter = new SpeechSynthesisUtterance(linhas[index]);
-        utter.lang = "pt-BR";
+                const utter = new SpeechSynthesisUtterance(linhas[index]);
+                utter.lang = "pt-BR";
 
-        utter.onend = () => {
-            index++;
+                utter.onend = () => {
+                    index++;
+                    lerProxima();
+                };
+
+                speechSynthesis.speak(utter);
+            }
+
             lerProxima();
-        };
+        }
 
-        speechSynthesis.speak(utter);
     }
-
-    lerProxima();
-}
-
-}
 
 
 </script>
