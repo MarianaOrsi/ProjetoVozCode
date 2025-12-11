@@ -9,14 +9,14 @@
     <div class="sidebar">
         <div>
             <div class="bottom-ide">
-                <button class="bottom-analisar" form="analisarCodigo" onclick="lerEditor()">Conferir código</button>
+                @* <button class="bottom-analisar" form="analisarCodigo" onclick="lerEditor()">Conferir código</button> *@
+                <button class="bottom-analisar" onclick="AnalisarCodigo()">Conferir código</button>
             </div>
         </div>
         <div class="sidebar-content">
             @* feedback do código *@
 
-            <p>@TempData["Analise"]</p>
-
+            <p id="RetornoIa">@TempData["Analise"]</p>
         </div>
     </div>
 
@@ -244,6 +244,11 @@
 </style>
 
 <script>
+    $(document).ready(function () {
+        // Código aqui
+        speechSynthesis.cancel();
+    });
+
     const textarea = document.getElementById("codeInput");
     const lineNumbers = document.getElementById("lineNumbers");
     const highlightLine = document.getElementById("highlightLine");
@@ -286,43 +291,42 @@
     textarea.addEventListener("keyup", updateHighlight);
 
 
+    function AnalisarCodigo() {
+        var codigoUsuario = document.getElementById("codeInput").value;
+
+        fetch("/execusao/teste", {
+            method: "POST",
+            headers: { 
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(codigoUsuario)
+        })
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("RetornoIa").innerText = data
+        })
+        .then(() => {
+            lerEditor();
+        })
+        .catch(error => console.error("Erro:", error));
+    }
+
 
     @* LENDO O CÓDIGO *@
+        function lerEditor() {
+            const texto = document.getElementById("RetornoIa").innerText;
+            
+            if (!texto.trim()) return;
 
-        /* Inicialização */
-        updateLineNumbers();
-    updateHighlight();
+            const fala = new SpeechSynthesisUtterance(texto);
+            fala.lang = "pt-BR";   // forçar português
+            fala.rate = 1;         // velocidade (0.5 a 2)
+            fala.pitch = 1;        // tom da voz
+            fala.volume = 1;
 
-    function lerTexto(texto) {
-        const utterance = new SpeechSynthesisUtterance(texto);
-        utterance.lang = "pt-BR";      // Voz em português
-        utterance.rate = 1;            // Velocidade (1 = normal)
-        utterance.pitch = 1;           // Tom
-        speechSynthesis.speak(utterance);
-
-        function lerCodigoLinhaALinha() {
-            const linhas = document.getElementById("editor").value.split("\n");
-
-            let index = 0;
-
-            function lerProxima() {
-                if (index >= linhas.length) return;
-
-                const utter = new SpeechSynthesisUtterance(linhas[index]);
-                utter.lang = "pt-BR";
-
-                utter.onend = () => {
-                    index++;
-                    lerProxima();
-                };
-
-                speechSynthesis.speak(utter);
-            }
-
-            lerProxima();
+            speechSynthesis.cancel();  // para evitar sobreposição
+            speechSynthesis.speak(fala);
         }
-
-    }
 
 
 </script>

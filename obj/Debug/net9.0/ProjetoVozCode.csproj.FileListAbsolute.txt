@@ -150,7 +150,6 @@ C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\Pr
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\scopedcss\projectbundle\ProjetoVozCode.bundle.scp.css
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\d6euwnqbrp-su4n4czzky.gz
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\zhlukik3kt-61n19gt1b8.gz
-C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\2k2tkn4klr-xtxxf3hu2r.gz
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\fqb5g59ka3-bqjiyaj88i.gz
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\s8cshxqekh-c2jlpeoesf.gz
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\z7v9il33q2-erw9l3u2r3.gz
@@ -227,3 +226,4 @@ C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\Pr
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\ProjetoVozCode.pdb
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\ProjetoVozCode.genruntimeconfig.cache
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\ref\ProjetoVozCode.dll
+C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\2k2tkn4klr-ipylkq3cs3.gz

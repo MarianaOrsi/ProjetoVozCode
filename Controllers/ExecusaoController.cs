@@ -34,5 +34,21 @@ namespace ProjetoVozCode.Controllers
 
             return RedirectToAction("Index");
         }
+
+        [HttpPost("teste")]
+        public async Task<string> AnalisarCodigo2([FromBody] string codigo)
+        {
+            if (!string.IsNullOrEmpty(codigo))
+            {
+                var retorno = await _repository.AnalisarCodigoParaFeedback("csharp", codigo);
+
+                TempData["Analise"] = retorno;
+                TempData["Codigo"] = codigo;
+
+                return "Testando o retorno da api";
+            }
+
+            return "";
+        }
     }
 }
