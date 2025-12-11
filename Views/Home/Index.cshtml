@@ -135,7 +135,7 @@
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form asp-action="Login" asp-controller="Login">
+    <form asp-action="Login" asp-controller="Login" method="post">
         <h3>Login</h3>
 
         <label for="username">E-mail</label>
@@ -147,7 +147,7 @@
         <button type="submit">Entrar</button>
         <a href="/cadastro"><button type="button">Cadastrar</button></a>
 
-        <h1 style="color: #f0ebd8ff">@TempData["ErrorMessage"]</h1>
+        <h1 style="color: #f0ebd8ff">@TempData["Login"]</h1>
     </form>
 
 </body>

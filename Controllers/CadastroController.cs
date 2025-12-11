@@ -14,6 +14,9 @@ namespace ProjetoVozCode.Controllers
         /// Função apenas para exibir a página de cadastrar
         public IActionResult Index()
         {
+            TempData["Cadastro"] = "";
+            TempData["Login"] = "";
+
             return View();
         }
 
@@ -25,31 +28,26 @@ namespace ProjetoVozCode.Controllers
         {
             if (usuario.Senha.ToLower() == confirmarsenha.ToLower())
             {
-                if (!string.IsNullOrWhiteSpace(usuario.Email))
+                var usuarioExistente = _context.Usuarios.FirstOrDefault(x => x.Email.ToLower() == usuario.Email.ToLower());
+
+                if (usuarioExistente != null)
                 {
-                    var usuarioExistente = _context.Usuarios.FirstOrDefault(x => x.Email.ToLower() == usuario.Email.ToLower());
+                    TempData["Cadastro"] = "Email já cadastrado.";
 
-                    if (usuarioExistente != null)
-                    {
-                        TempData["ErrorMessage"] = "Email já cadastrado.";
-                        return RedirectToAction("Privacy", "Home");
-                    }
-
-                    _context.Add(usuario);
-
-                    _context.SaveChanges();
+                    return RedirectToAction("Index", "Execusao");
                 }
-                else
-                {
-                    TempData["ErrorMessage"] = "Login inválido";
-                }
-                return RedirectToAction("Login", "Login");
+
+                _context.Add(usuario);
+
+                _context.SaveChanges();
+
+                return RedirectToAction("Index", "Login");
             }
-
-            TempData["ErrorMessage"] = "As senhas não conferem";
-
+            else
+            {
+                TempData["Cadastro"] = "As senhas não conferem";
+            }
             return RedirectToAction("Index");
         }
-
     }
 }

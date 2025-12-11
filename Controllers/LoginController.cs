@@ -13,21 +13,24 @@ namespace ProjetoVozCode.Controllers
         /// Função apenas para realizar o ato de logar
         public IActionResult Login(string email = "", string senha = "")
         {
-            if (!string.IsNullOrEmpty(email))
+            if (HttpContext.Request.Method != "GET")
             {
-                // Procurando o usuario pelo email e senha
-                Usuario usuario = _context.Usuarios.Where(x => x.Email.ToString().ToLower() == email.ToLower()).FirstOrDefault();
-
-                if (usuario != null)
+                if (!string.IsNullOrEmpty(email))
                 {
-                    if (usuario.Senha == senha)
+                    // Procurando o usuario pelo email e senha
+                    Usuario usuario = _context.Usuarios.Where(x => x.Email.ToString().ToLower() == email.ToLower()).FirstOrDefault();
+
+                    if (usuario != null)
                     {
-                        return RedirectToAction("Execusao", "Home");
+                        if (usuario.Senha == senha)
+                        {
+                            return RedirectToAction("Index", "Execusao");
+                        }
                     }
                 }
-            }
 
-            TempData["ErrorMessage"] = "Login inválido";
+                TempData["Login"] = "Login inválido";
+            }
 
             return RedirectToAction("Index", "Home");
         }
