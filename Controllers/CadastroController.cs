@@ -43,7 +43,7 @@ namespace ProjetoVozCode.Controllers
                 {
                     TempData["ErrorMessage"] = "Login inválido";
                 }
-                return RedirectToAction("Login", "Cadastro");
+                return RedirectToAction("Login", "Login");
             }
 
             TempData["ErrorMessage"] = "As senhas não conferem";
