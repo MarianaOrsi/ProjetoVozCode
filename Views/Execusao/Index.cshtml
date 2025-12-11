@@ -16,7 +16,7 @@
         <div class="sidebar-content">
             @* feedback do código *@
 
-            <p id="RetornoIa">@TempData["Analise"]</p>
+            <p id="RetornoIa"></p>
         </div>
     </div>
 
@@ -244,10 +244,10 @@
 </style>
 
 <script>
-    $(document).ready(function () {
+    window.onbeforeunload = function () {
         // Código aqui
         speechSynthesis.cancel();
-    });
+    };
 
     const textarea = document.getElementById("codeInput");
     const lineNumbers = document.getElementById("lineNumbers");
@@ -291,10 +291,12 @@
     textarea.addEventListener("keyup", updateHighlight);
 
 
-    function AnalisarCodigo() {
+    async function AnalisarCodigo() {
         var codigoUsuario = document.getElementById("codeInput").value;
 
-        fetch("/execusao/teste", {
+        document.getElementById("RetornoIa").innerText = "Aguarda o feedback";
+
+        await fetch("/execusao/teste", {
             method: "POST",
             headers: { 
                 "Content-Type": "application/json"

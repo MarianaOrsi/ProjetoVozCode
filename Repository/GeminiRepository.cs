@@ -9,7 +9,7 @@ namespace VozCode.Repositories
 
         public GeminiCodeAnalysisRepository()
         {
-            string apiKeyGemini = "AIzaSyA6s-3MZQT_4Rxq8Ywd5TJj5mSioqj6Adw"
+            string apiKeyGemini = "AIzaSyA03IFJQ6lOMEFmjdWxd5tR3bQHdPp-r9o"
                 ?? throw new ArgumentException("API KEY não encontrada");
 
             _modelo = new GenerativeModel(
@@ -54,6 +54,9 @@ namespace VozCode.Repositories
 
                 ## Explicação do Código
                 Explique de forma simples o que o código faz e como funciona. Uma explicação curta é suficiente.
+
+                ## Consideração importante
+                Para gerar o feedback, não o gere em padrões de markdown, apenas para textos convencionais para que possa ser feitos a leitura das informações de forma natural
 
                 (Conteúdo aqui)
 

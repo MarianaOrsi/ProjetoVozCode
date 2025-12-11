@@ -227,3 +227,4 @@ C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\Pr
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\ProjetoVozCode.genruntimeconfig.cache
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\ref\ProjetoVozCode.dll
 C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\compressed\2k2tkn4klr-ipylkq3cs3.gz
+C:\Users\mariana.morsi\OneDrive - SENAC - SP\Área de Trabalho\ProjetoVozCode\ProjetoVozCode\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt

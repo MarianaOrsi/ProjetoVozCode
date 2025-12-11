@@ -42,10 +42,7 @@ namespace ProjetoVozCode.Controllers
             {
                 var retorno = await _repository.AnalisarCodigoParaFeedback("csharp", codigo);
 
-                TempData["Analise"] = retorno;
-                TempData["Codigo"] = codigo;
-
-                return "Testando o retorno da api";
+                return retorno;
             }
 
             return "";
