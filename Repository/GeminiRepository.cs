@@ -9,7 +9,7 @@ namespace VozCode.Repositories
 
         public GeminiCodeAnalysisRepository()
         {
-            string apiKeyGemini = "AIzaSyA03IFJQ6lOMEFmjdWxd5tR3bQHdPp-r9o"
+            string apiKeyGemini = "AIzaSyDk-K5zGsAjN3680C5TydBZzOXzOB3RCWE"
                 ?? throw new ArgumentException("API KEY não encontrada");
 
             _modelo = new GenerativeModel(
